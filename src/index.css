@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Purple Theme (Translucent) */
+  --bg-color: rgba(243, 229, 245, 0.85);
+  /* Light purple tint, translucent */
+  --text-color: #4a148c;
+  /* Dark purple text */
+  --card-bg: rgba(255, 255, 255, 0.85);
+  /* White, translucent */
+  --primary-color: #9c27b0;
+  /* Purple */
+  --primary-hover: #7b1fa2;
+  --secondary-color: #ba68c8;
+  --border-color: #e1bee7;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --font-main: 'Poppins', system-ui, sans-serif;
+
+  --nav-height: 64px;
+  --max-width: 800px;
+}
+
+[data-theme='dark'] {
+  --bg-color: rgba(243, 229, 245, 0.9);
+  --text-color: #4a148c;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --primary-color: #9c27b0;
+  --primary-hover: #7b1fa2;
+  --secondary-color: #ba68c8;
+  --border-color: #e1bee7;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  background-image: url('./assets/app_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
